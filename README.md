@@ -1,9 +1,9 @@
-# Guns-lite
+# Flash Material 
 
 ## 前言
 
- - guns-lite是在[guns](https://github.com/stylefeng/Guns)的基础上将数据库层由mybatis替换为spring data jpa的系统。
- - guns-lite是一个基于spring boot的后台管理系统。
+ - flash-material是在[guns](https://github.com/stylefeng/Guns)的基础上将数据库层由mybatis替换为spring data jpa的系统。
+ - flash-material是一个基于spring boot的后台管理系统。
  - 另提供前后端分离（vue）版本[web-flash](https://github.com/enilu/web-flash)
 
 ## 分支
@@ -23,7 +23,7 @@
 - guns-service 服务层
 
 ## 演示
-- http://guns-lite.enilu.cn/
+- http://flash-material.enilu.cn/
 
 ## 技术选型
 
@@ -35,7 +35,7 @@
 - 前端：Beetl模版+Bootstrap
 
 ## 包含的功能
-guns-lite包含了成熟的后台管理功能guns-admin
+flash-material包含了成熟的后台管理功能guns-admin
 上面两者包含的功能一致：
 - 部门管理
 - 用户管理
@@ -66,18 +66,18 @@ flush privileges;
 - guns-dmin启动的时候回自动创建表并导入src/main/resources/import.sql到数据库中，所以无需开发人员自己初始化表结构
 - 启动guns-admin
 - 访问 http://localhost:8080，   登录，用户名密码:admin/admin
-- ![demo](http://www.enilu.cn/github/guns-lite.gif)
+- ![demo](http://www.enilu.cn/github/flash-material.gif)
 
 ## 文档
 
-- [http://enilu.github.io/guns-lite](http://enilu.github.io/guns-lite)
-- [http://enilu.gitee.io/guns-lite](http://enilu.gitee.io/guns-lite)
+- [http://enilu.github.io/flash-material](http://enilu.github.io/flash-material)
+- [http://enilu.gitee.io/flash-material](http://enilu.gitee.io/flash-material)
 
 ## 感谢
 
-- [stylefeng](https://github.com/stylefeng) 没有他就没有guns，没有guns就没有这个guns-lite
+- [stylefeng](https://github.com/stylefeng) 没有他就没有guns，没有guns就没有这个flash-material
 
 ## 交流
-- Bugs: [Issues](https://github.com/enilu/guns-lite/issues/new)
+- Bugs: [Issues](https://github.com/enilu/flash-material/issues/new)
 - QQ: 欢迎加入qq交流群 740230743
-- Gitter: [Gitter channel](https://gitter.im/guns-lite/community)
+- Gitter: [Gitter channel](https://gitter.im/flash-material/community)

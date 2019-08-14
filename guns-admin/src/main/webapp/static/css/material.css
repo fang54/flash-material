@@ -1,0 +1,19 @@
+.input-group .form-control{
+    float:none;
+}
+
+.ibox-title h5 {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+    font-weight:600;
+}
+.dept-tree{
+    padding:10px 0px 0px 0px;
+}
+.ztree{
+    padding: 0px;margin: 5px;
+}
