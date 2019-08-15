@@ -112,7 +112,7 @@ MgrUser.delMgrUser = function () {
             ajax.start();
         };
 
-        Feng.confirm("是否删除用户" + MgrUser.seItem.account + "?",operation);
+        Feng.confirm("是否删除用户" + MgrUser.seItem.account + "?",operation,"删除后该用户将无法恢复，请谨慎操作");
     }
 };
 

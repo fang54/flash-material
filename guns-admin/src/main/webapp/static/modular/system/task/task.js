@@ -112,7 +112,7 @@ Task.viewLog = function (id) {
         var index = layer.open({
             type: 2,
             title: '查看任务日志',
-            area: ['85%', '85%'], //宽高
+            area: ['75%', '75%'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/task/viewLog/' + id

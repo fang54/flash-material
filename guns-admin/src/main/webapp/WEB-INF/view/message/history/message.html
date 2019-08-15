@@ -18,9 +18,6 @@
                         </div>
                         <div class="hidden-xs" id="MessageTableToolbar" role="group">
                             @if(shiro.hasPermission("/message/history")){
-                                <#button name="查看" icon="fa-edit" clickFun="Message.openDetail()" space="true"/>
-                            @}
-                            @if(shiro.hasPermission("/message/history/clear")){
                                 <#button name="清空" icon="fa-remove"  btnCss="danger" clickFun="Message.clear()" space="true"/>
                             @}
                         </div>

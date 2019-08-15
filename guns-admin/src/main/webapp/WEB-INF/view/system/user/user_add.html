@@ -1,6 +1,6 @@
 @layout("/common/include.html"){
-<div class="ibox float-e-margins">
-	<div class="ibox-content">
+<div class="card">
+	<div class="card-body card-padding">
 		<div class="form-horizontal" id="userInfoForm">
 		
 			<input type="hidden" id="id" value="">
@@ -25,8 +25,7 @@
 					<div id="driverInfoContent">
 						<#input id="name" name="姓名" underline="false"/>
 
-						<#input id="birthday" name="出生日期" underline="false" type="date"
-								clickFun="laydate({istime: false, format: 'YYYY-MM-DD'})"/>
+						<#datePicker id="birthday" name="出生日期" underline="false" type="date"/>
 
 						<#input id="rePassword" name="确认密码" type="password" underline="false"/>
 

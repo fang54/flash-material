@@ -10,6 +10,7 @@
     text-overflow: ellipsis;
     float: left;
     font-weight:600;
+    margin-bottom:15px;
 }
 .dept-tree{
     padding:10px 0px 0px 0px;

@@ -30,15 +30,16 @@ INSERT INTO `t_sys_cfg` VALUES ('5', null, null, '1', '2019-04-15 21:36:17', '�
 -- ----------------------------
 -- Records of t_sys_dept
 -- ----------------------------
-INSERT INTO `t_sys_dept` VALUES ('1', null, null, null, null, '总公司', '1', '0', '[0],', '总公司', null, null);
-INSERT INTO `t_sys_dept` VALUES ('2', null, null, null, null, '开发部', '2', '1', '[0],[1],', '开发部', null, null);
-INSERT INTO `t_sys_dept` VALUES ('3', null, null, null, null, '运营部', '3', '1', '[0],[1],', '运营部', null, null);
-INSERT INTO `t_sys_dept` VALUES ('4', null, null, null, null, '战略部', '4', '1', '[0],[1],', '战略部', null, null);
-INSERT INTO `t_sys_dept` VALUES ('5', null, null, null, null, '人事部', '5', '1', '[0],[1],', '人事部', null, null);
-INSERT INTO `t_sys_dept` VALUES ('6', null, null, null, null, '行政部', '6', '1', '[0],[1],', '行政部', null, null);
-INSERT INTO `t_sys_dept` VALUES ('7', null, null, null, null, '上海分公司', '7', '1', '[0],[1],', '上海分公司', null, null);
-INSERT INTO `t_sys_dept` VALUES ('8', null, null, null, null, '运维部', '8', '7', '[0],[1],[7],', '运维部', null, null);
-INSERT INTO `t_sys_dept` VALUES ('9', null, null, null, null, '销售部', '9', '7', '[0],[1],[7],', '销售部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('1', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '山迪亚集团', '1', '0', '[0],', '总公司', '', null);
+INSERT INTO `t_sys_dept` VALUES ('2', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '开发部', '2', '1', '[0],[1],', '开发部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('3', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '运营部', '3', '1', '[0],[1],', '运营部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('4', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '战略部', '4', '1', '[0],[1],', '战略部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('5', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '人事部', '5', '1', '[0],[1],', '人事部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('6', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '行政部', '6', '1', '[0],[1],', '行政部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('7', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '山迪亚上海有限责任公司', '7', '1', '[0],[1],', '上海分公司', '', null);
+INSERT INTO `t_sys_dept` VALUES ('8', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '运维部', '8', '7', '[0],[1],[7],', '运维部', null, null);
+INSERT INTO `t_sys_dept` VALUES ('9', '1', '2019-08-15 16:31:13', '1', '2019-08-15 16:31:13', '销售部', '9', '7', '[0],[1],[7],', '销售部', null, null);
+
 
 -- ----------------------------
 -- Records of t_sys_login_log
@@ -211,9 +212,9 @@ INSERT INTO `t_sys_task` (`id`, `name`, `job_group`, `job_class`, `note`, `cron`
 -- Records of t_sys_user
 -- ----------------------------
 
-INSERT INTO `t_sys_user` VALUES ('-1', null, null, null, null, 'system', null, null, null, null, '应用系统', null, null, null, null, null, null, null);
-INSERT INTO `t_sys_user` VALUES ('1', null, '2016-01-29 08:49:53', '1', '2019-03-20 23:45:24', 'admin', null, '2017-05-05 00:00:00', '3', 'eniluzt@qq.com', '管理员', '6ab1f386d715cfb6be85de941d438b02', null, '1', '8pgby', '2', '1', '25');
-INSERT INTO `t_sys_user` VALUES ('2', null, '2018-09-13 17:21:02', '1', '2019-01-09 23:05:51', 'developer', null, '2017-12-31 00:00:00', '4', 'eniluzt@qq.com', '网站管理员', '4552805b07a4bf92ce1cea0373aab868', '', '2', 'vscp9', '1', '1', null);
+INSERT INTO `t_sys_user` VALUES ('-1', null, null, null, null, 'system', null, null, null, null, '应用系统', 'avatar.png', null, null, null, null, null, null);
+INSERT INTO `t_sys_user` VALUES ('1', null, '2016-01-29 08:49:53', '1', '2019-03-20 23:45:24', 'admin', 'avatar.png', '2017-05-05 00:00:00', '3', 'eniluzt@qq.com', '管理员', '6ab1f386d715cfb6be85de941d438b02', null, '1', '8pgby', '2', '1', '25');
+INSERT INTO `t_sys_user` VALUES ('2', null, '2018-09-13 17:21:02', '1', '2019-01-09 23:05:51', 'developer', 'avatar.png', '2017-12-31 00:00:00', '4', 'eniluzt@qq.com', '网站管理员', '4552805b07a4bf92ce1cea0373aab868', '', '2', 'vscp9', '1', '1', null);
 
 -- ----------------------------
 -- Records of t_test_boy

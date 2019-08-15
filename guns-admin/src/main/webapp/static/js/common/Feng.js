@@ -5,14 +5,60 @@ var Feng = {
             this.ctxPath = ctx;
         }
     },
-    confirm: function (tip, ensure) {//询问框
-        parent.layer.confirm(tip, {
-            btn: ['确定', '取消']
-        }, function (index) {
+    notify:function(message,type){
+        $.growl({
+            message: message
+        },{
+            type: type,
+            allow_dismiss: false,
+            label: 'Cancel',
+            className: 'btn-xs btn-inverse',
+            placement: {
+                from: 'top',
+                align: 'center'
+            },
+            delay: 3500,
+            animate: {
+                enter: 'animated fadeIn',
+                exit: 'animated fadeOut'
+            },
+            offset: {
+                x: 20,
+                y: 85
+            }
+        });
+    },
+    info: function (info) {
+        Feng.notify(info, 'info');
+    },
+    success: function (info) {
+        Feng.notify(info, 'success');
+    },
+    warning: function (info) {
+        Feng.notify(info, 'warning');
+    },
+    error: function (info) {
+        Feng.notify(info, 'danger');
+    },
+    /**
+     * 确认框
+     * @param tip 确认提示
+     * @param ensure 确认操作
+     * @param subTip 更详细的确认询问信息，可以不传改参数
+     */
+    confirm: function (tip, ensure,subTip) {
+        swal({
+            title: tip,
+            text: subTip?subTip:"",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确定",
+            cancelButtonText:'取消',
+            closeOnConfirm: true
+        }, function(){
+            // swal("Deleted!", "Your imaginary file has been deleted.", "success");
             ensure();
-            parent.layer.close(index);
-        }, function (index) {
-            parent.layer.close(index);
         });
     },
     log: function (info) {
@@ -23,15 +69,7 @@ var Feng = {
             icon: iconIndex
         });
     },
-    info: function (info) {
-        Feng.alert(info, 0);
-    },
-    success: function (info) {
-        Feng.alert(info, 1);
-    },
-    error: function (info) {
-        Feng.alert(info, 2);
-    },
+
     infoDetail: function (title, info) {
         var display = "";
         if (typeof info == "string") {

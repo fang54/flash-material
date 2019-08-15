@@ -14,9 +14,11 @@ var Message = {
 Message.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-            {title: '自增主键', field: 'id', visible: true, align: 'center', valign: 'middle'},
+            {title: 'ID', field: 'id', visible: true, align: 'center', valign: 'middle'},
             {title: '消息模板', field: 'tplCode', visible: true, align: 'center', valign: 'middle'},
-            {title: '消息内容', field: 'content', visible: true, align: 'center', valign: 'middle'},
+            {title: '消息内容', field: 'content', visible: true, align: 'center', valign: 'middle',formatter:function(data,row){
+                return '<a href="#" onclick="Message.openDetail('+row.id+')">'+data+'</a>'
+            }},
             {title: '接收者', field: 'receiver', visible: true, align: 'center', valign: 'middle'},
             {title: '发送时间', field: 'createTime', visible: true, align: 'center', valign: 'middle'}
     ];
@@ -39,18 +41,17 @@ Message.check = function () {
 /**
  * 打开查看系统参数详情
  */
-Message.openDetail = function () {
-    if (this.check()) {
+Message.openDetail = function (id) {
         var index = layer.open({
             type: 2,
             title: '消息详情',
             area: ['800px', '420px'], //宽高
             fix: false, //不固定
             maxmin: true,
-            content: Feng.ctxPath + '/message/history/view/' + Message.seItem.id
+            content: Feng.ctxPath + '/message/history/view/' + id
         });
         this.layerIndex = index;
-    }
+
 };
 
 /**

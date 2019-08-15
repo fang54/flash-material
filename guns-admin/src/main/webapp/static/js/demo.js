@@ -12,7 +12,7 @@ $(window).load(function(){
                 from: 'top',
                 align: 'right'
             },
-            delay: 2500,
+            delay: 11500,
             animate: {
                     enter: 'animated fadeIn',
                     exit: 'animated fadeOut'

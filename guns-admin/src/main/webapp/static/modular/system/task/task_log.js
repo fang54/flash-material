@@ -14,7 +14,7 @@ var TaskLog = {
 TaskLog.initColumn = function () {
     return [
         {field: 'selectItem', radio: true,visible:false},
-        {title: '任务', field: 'name', visible: true, align: 'center', valign: 'middle'},
+        {title: '执行任务', field: 'name', visible: true, align: 'center', valign: 'middle'},
         {title: '执行日期', field: 'execAt', visible: true, align: 'center', valign: 'middle'},
         {
             title: '执行结果',field: 'execSuccess',visible: true,align: 'center',valign: 'middle',

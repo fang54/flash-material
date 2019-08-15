@@ -8,14 +8,13 @@
 <div class="form-group">
     <label class="col-sm-3 control-label">${name}</label>
     <div class="col-sm-9">
-        <div class="fg-line">
         @if(isNotEmpty(multiple)){
-            <select class="form-control" id="${id}" name="${id}" multiple="${multiple}">
+            <select class="selectpicker" id="${id}" name="${id}" multiple="${multiple}">
                 ${tagBody!}
             </select>
 
         @}else{
-            <select class="form-control" id="${id}" name="${id}">
+            <select class="selectpicker" id="${id}" name="${id}">
                 ${tagBody!}
             </select>
         @}
@@ -24,7 +23,6 @@
             <input class="form-control" type="hidden" id="${hidden}" value="${hiddenValue!}">
         @}
         </div>
-    </div>
 </div>
 @if(isNotEmpty(underline) && underline == 'true'){
     <div class="hr-line-dashed"></div>
