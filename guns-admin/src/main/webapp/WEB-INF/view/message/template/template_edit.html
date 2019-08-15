@@ -1,6 +1,6 @@
 @layout("/common/include.html"){
-<div class="ibox float-e-margins">
-    <div class="ibox-content">
+<div class="card">
+    <div class="card-body card-padding">
         <div class="form-horizontal">
             <input type="hidden" id="id" value="${item.id}">
             <div class="row">
@@ -34,10 +34,10 @@
             </div>
 
         <div class="col-sm-6">
-            <#textarea id="cond" name="发送条件" rows="3" cols="50" value="${item.cond}"/>
+            <#textarea id="cond" name="发送条件" rows="5" cols="50" value="${item.cond}"/>
         </div>
         <div class="col-sm-6">
-            <#textarea id="content" name="内容"  rows="3" cols="50" value="${item.content}"/>
+            <#textarea id="content" name="内容"  rows="5" cols="50" value="${item.content}"/>
         </div>
             </div>
             <div class="row btn-group-m-t">

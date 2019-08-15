@@ -44,7 +44,7 @@ MessageSender.openAdd = function () {
     var index = layer.open({
         type: 2,
         title: '添加发送器',
-        area: ['800px', '420px'], //宽高
+        area: ['60%', '45%'], //宽高
         fix: false, //不固定
         maxmin: true,
         content: Feng.ctxPath + '/message/sender/add'
@@ -60,7 +60,7 @@ MessageSender.openDetail = function () {
         var index = layer.open({
             type: 2,
             title: '发送器详情',
-            area: ['800px', '420px'], //宽高
+            area: ['60%', '50%'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/message/sender/update/' + MessageSender.seItem.id

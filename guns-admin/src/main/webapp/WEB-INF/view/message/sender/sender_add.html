@@ -1,14 +1,17 @@
 @layout("/common/include.html"){
-<div class="ibox float-e-margins">
-    <div class="ibox-content">
+<div class="card">
+    <div class="card-body card-padding">
         <div class="form-horizontal">
             <input type="hidden" id="id" value="">
             <div class="row">
-                <div class="col-sm-6 b-r">
+                <div class="col-sm-12 b-r">
                             <#input id="name" name="名称"/>
-                            <#input id="className" name="类名" underline="true"/>
+
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12 b-r">
+                    <#input id="className" name="类名" underline="true"/>
+                </div>
+                <div class="col-sm-12">
                             <#input id="tplCode" name="外部模板编号" underline="true"/>
                 </div>
             </div>

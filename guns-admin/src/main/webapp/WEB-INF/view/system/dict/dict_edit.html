@@ -1,6 +1,6 @@
 @layout("/common/include.html"){
-<div class="ibox float-e-margins">
-    <div class="ibox-content">
+<div class="card">
+    <div class="card-body card-padding">
         <div class="form-horizontal">
 
             <input type="hidden" id="id" value="">
@@ -23,7 +23,7 @@
                         <div class="form-group" name="dictItem" id="dictItem${itemLP.index}">
                             <label class="col-sm-2 control-label">值</label>
                             <div class="col-sm-2">
-                                <input class="form-control" type="text" name="itemNum" value="${item.num}">
+                                <input class="form-control" type="text" name="itemNum" value="${item.value}">
                             </div>
                             <label class="col-sm-2 control-label" style="width: 8%;">名称</label>
                             <div class="col-sm-2">

@@ -21,6 +21,9 @@
 @   btnType = btnCss;
 @}
 <button type="button" class="btn btn-${btnType} ${spaceCss}" onclick="${clickFun!}" id="${id!}">
-    <i class="fa ${icon}"></i>&nbsp;${name}
+@if(isNotEmpty(icon)){
+    <i class="fa ${icon}"></i>
+@}
+&nbsp;${name}
 </button>
 

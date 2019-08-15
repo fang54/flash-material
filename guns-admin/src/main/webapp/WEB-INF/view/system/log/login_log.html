@@ -1,33 +1,30 @@
 @layout("/common/layout.html"){
-<div class="row">
-    <div class="col-sm-12">
-        <div class="ibox float-e-margins">
-            <div class="ibox-title">
-                <h5>登录日志</h5>
-            </div>
-            <div class="ibox-content">
-                <div class="row row-lg">
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <#TimeCon id="beginTime" name="开始时间" isTime="false" pattern="YYYY-MM-DD" />
-                            </div>
-                            <div class="col-sm-3">
-                                <#TimeCon id="endTime" name="结束时间" isTime="false" pattern="YYYY-MM-DD" />
-                            </div>
-                            <div class="col-sm-3">
-                                <#NameCon id="logName" name="日志名称" />
-                            </div>
-                            <div class="col-sm-1">
-                                <#button name="搜索" icon="fa-search" clickFun="LoginLog.search()"/>
-                            </div>
-                            <div class="col-sm-2">
-                                <#button name="清空日志" icon="fa-remove" btnCss="danger" clickFun="LoginLog.delLog()"/>
-                            </div>
-                        </div>
-                        <#table id="LoginLogTable"/>
+<div class="block-header">
+    <h2>业务日志</h2>
+</div>
+
+<div class="card">
+    <div class="card-body card-padding">
+        <div class="row row-lg">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <#TimeCon id="beginTime" name="开始时间" isTime="false" pattern="YYYY-MM-DD" />
+                    </div>
+                    <div class="col-sm-3">
+                        <#TimeCon id="endTime" name="结束时间" isTime="false" pattern="YYYY-MM-DD" />
+                    </div>
+                    <div class="col-sm-3">
+                        <#NameCon id="logName" name="日志名称" />
+                    </div>
+                    <div class="col-sm-1">
+                        <#button name="搜索" icon="fa-search" clickFun="LoginLog.search()"/>
+                    </div>
+                    <div class="col-sm-2">
+                        <#button name="清空日志" icon="fa-remove" btnCss="danger" clickFun="LoginLog.delLog()"/>
                     </div>
                 </div>
+                <#table id="LoginLogTable"/>
             </div>
         </div>
     </div>
