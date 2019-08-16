@@ -11,10 +11,10 @@
     <link href="${ctxPath}/static/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
     <link href="${ctxPath}/static/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
     <link href="${ctxPath}/static/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-    <link href="${ctxPath}/static/vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+    <link href="${ctxPath}/static/vendors/bower_components/bootstrap-select/1.7.2/css/bootstrap-select.css" rel="stylesheet">
     <link href="${ctxPath}/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
     <link href="${ctxPath}/static/vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
-    <link href="${ctxPath}/static/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="${ctxPath}/static/vendors/bower_components/eonasdan-bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="${ctxPath}/static/vendors/farbtastic/farbtastic.css" rel="stylesheet">
     <link href="${ctxPath}/static/vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
     <link href="${ctxPath}/static/vendors/summernote/dist/summernote.css" rel="stylesheet">
@@ -23,6 +23,11 @@
     <link href="${ctxPath}/static/css/app.min.1.css" rel="stylesheet">
     <link href="${ctxPath}/static/css/app.min.2.css" rel="stylesheet">
     <link href="${ctxPath}/static/css/material.css" rel="stylesheet">
+    <style>
+        .ztree-icon-default{
+            background-image: url("/img/tree/default/icon.png");
+        }
+    </style>
 
     <!--整合-->
     <link href="${ctxPath}/static/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
@@ -32,19 +37,19 @@
     <link href="${ctxPath}/static/css/_fstyle.css" rel="stylesheet">
 
     <!-- Javascript Libraries -->
-    <script src="${ctxPath}/static/vendors/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/jquery/2.1.4/jquery.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script src="${ctxPath}/static/vendors/bower_components/flot/jquery.flot.js"></script>
     <script src="${ctxPath}/static/vendors/bower_components/flot/jquery.flot.resize.js"></script>
     <script src="${ctxPath}/static/vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
     <script src="${ctxPath}/static/vendors/sparklines/jquery.sparkline.min.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/moment/min/moment-with-locales.min.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/moment/min/moment.min.js"></script>
-    <script src="${ctxPath}/static/vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/jquery.easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/bootstrap-select/1.7.2/js/bootstrap-select.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/moment/2.10.6/moment-with-locales.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/eonasdan-bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/moment/2.10.6/moment.min.js"></script>
+    <script src="${ctxPath}/static/vendors/bower_components/Waves/0.7.4/waves.min.js"></script>
     <script src="${ctxPath}/static/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
     <script src="${ctxPath}/static/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
     <script src="${ctxPath}/static/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -78,6 +83,7 @@
     <script src="${ctxPath}/static/js/common/web-upload-object.js"></script>
     <script src="${ctxPath}/static/js/common/ztree-object.js"></script>
     <script src="${ctxPath}/static/js/common/Feng.js"></script>
+
 
 
     <script type="text/javascript">
