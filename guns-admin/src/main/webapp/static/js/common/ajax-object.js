@@ -32,6 +32,10 @@
 		        	me.success(data);
 		        },
 		        error: function(data) {
+		        	//如果后台通过spring validator返回错误信息，则取第一条错误信息并显示
+		        	if(data.responseJSON.errors && data.responseJSON.errors.length>0){
+						data.responseJSON.message = data.responseJSON.errors[0].defaultMessage;
+					}
 		        	me.error(data);
 		        }
 		    });

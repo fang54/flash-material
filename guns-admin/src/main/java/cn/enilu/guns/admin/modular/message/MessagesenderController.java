@@ -15,6 +15,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @Controller
 @RequestMapping("/message/sender")
 public class MessagesenderController extends BaseController {
@@ -62,7 +64,7 @@ public class MessagesenderController extends BaseController {
     @RequestMapping(method = RequestMethod.POST)
     @BussinessLog(value = "保存消息发送器", key = "name", dict = CommonDict.class)
     @ResponseBody
-    public Object save(@ModelAttribute MessageSender tMessageSender) {
+    public Object save(@ModelAttribute @Valid MessageSender tMessageSender) {
         messagesenderService.save(tMessageSender);
         return SUCCESS_TIP;
     }

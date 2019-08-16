@@ -173,7 +173,7 @@ public class DateUtil {
 	 * @return
 	 */
 	public static Date parse(String date, String pattern) {
-		if (date != null) {
+		if (StringUtils.isNotEmpty(date)) {
 			if (pattern == null || "".equals(pattern)) {
 				return null;
 			}

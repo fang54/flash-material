@@ -6,6 +6,7 @@
     type : date 或者 datetime
 @*/
 <div class="input-group">
+    <div class="fg-line">
     <input id="${id}"  type="text"
            @if(isNotEmpty(type)){
                 @if(type == "date"){
@@ -36,4 +37,5 @@
            disabled="${disabled}"
            @}
     >
+    </div>
 </div>

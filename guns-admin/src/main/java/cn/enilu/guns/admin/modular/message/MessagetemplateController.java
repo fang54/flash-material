@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -72,7 +73,7 @@ public class MessagetemplateController extends BaseController {
     @RequestMapping(method = RequestMethod.POST)
     @BussinessLog(value = "编辑消息模板", key = "name", dict = CommonDict.class)
     @ResponseBody
-    public Object save(@ModelAttribute MessageTemplate tMessageTemplate) {
+    public Object save(@ModelAttribute @Valid MessageTemplate tMessageTemplate) {
         messagetemplateService.saveOrUpdate(tMessageTemplate);
         return SUCCESS_TIP;
     }
