@@ -82,7 +82,7 @@ Task.openAddTask = function () {
     var index = layer.open({
         type: 2,
         title: '添加系统参数',
-        area: ['85%', '85%'], //宽高
+        area: ['65%', '370px'], //宽高
         fix: false, //不固定
         maxmin: true,
         content: Feng.ctxPath + '/task/task_add'
@@ -98,7 +98,7 @@ Task.openTaskDetail = function () {
         var index = layer.open({
             type: 2,
             title: '系统参数详情',
-            area: ['85%', '85%'], //宽高
+            area: ['65%', '400px'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/task/task_update/' + Task.seItem.id

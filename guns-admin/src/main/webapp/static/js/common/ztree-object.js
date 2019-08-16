@@ -19,7 +19,8 @@
 			var settings = {
 				view : {
 					dblClickExpand : true,
-					selectedMulti : false
+					selectedMulti : false,
+					showIcon:false
 				},
 				data : {simpleData : {enable : true}},
 				callback : {

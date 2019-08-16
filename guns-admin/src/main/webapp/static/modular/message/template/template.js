@@ -47,7 +47,7 @@ MessageTemplate.openAdd = function () {
     var index = layer.open({
         type: 2,
         title: '添加模板',
-        area: ['60%', '60%'], //宽高
+        area: ['60%', '380px'], //宽高
         fix: false, //不固定
         maxmin: true,
         content: Feng.ctxPath + '/message/template/add'
@@ -63,7 +63,7 @@ MessageTemplate.openDetail = function () {
         var index = layer.open({
             type: 2,
             title: '模板详情',
-            area: ['60%', '60%'], //宽高
+            area: ['60%', '380px'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/message/template/update/' + MessageTemplate.seItem.id

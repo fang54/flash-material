@@ -42,7 +42,7 @@ Cfg.openAddCfg = function () {
     var index = layer.open({
         type: 2,
         title: '添加系统参数',
-        area: ['800px', '300px'], //宽高
+        area: ['65%', '280px'], //宽高
         fix: false, //不固定
         maxmin: true,
         content: Feng.ctxPath + '/cfg/cfg_add'
@@ -58,7 +58,7 @@ Cfg.openCfgDetail = function () {
         var index = layer.open({
             type: 2,
             title: '系统参数详情',
-            area: ['800px', '300px'], //宽高
+            area: ['65%', '280px'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/cfg/cfg_update/' + Cfg.seItem.id

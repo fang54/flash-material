@@ -18,3 +18,7 @@
 .ztree{
     padding: 0px;margin: 5px;
 }
+.panel-ztree {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    min-height: 644px;
+}

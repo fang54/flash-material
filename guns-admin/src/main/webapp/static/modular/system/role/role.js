@@ -98,7 +98,7 @@ Role.assign = function () {
         var index = layer.open({
             type: 2,
             title: '权限配置',
-            area: ['300px', '450px'], //宽高
+            area: ['300px', '550px'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/role/role_assign/' + this.seItem.id
