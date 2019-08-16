@@ -7,7 +7,7 @@
         <groupId>cn.enilu</groupId>
         <version>1.0</version>
     </parent>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>guns-admin</artifactId>
@@ -69,14 +69,34 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <!--以war包形式部署到tomcat中-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<version>2.6</version>-->
+                <!--<configuration>-->
+                    <!--<warName>material</warName>-->
+                    <!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
+            <!--以jar包形式单独部署开始-->
             <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <warName>material</warName>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <mainClass>cn.enilu.guns.admin.AdminApplication</mainClass>
+                    <layout>ZIP</layout>
+                    <finalName>material</finalName>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+
         </plugins>
         <resources>
             <resource>
