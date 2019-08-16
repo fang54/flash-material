@@ -6,11 +6,6 @@
     type : date 或者 datetime
 @*/
 <div class="input-group">
-    <div class="input-group-btn">
-        <button data-toggle="dropdown" class="btn btn-white dropdown-toggle"
-                type="button">${name}
-        </button>
-    </div>
     <input id="${id}"  type="text"
            @if(isNotEmpty(type)){
                 @if(type == "date"){
@@ -30,8 +25,8 @@
            readonly="${readonly}"
            @}
 
-           @if(isNotEmpty(placeHolder)){
-           placeHolder="${placeHolder}"
+           @if(isNotEmpty(placeholder)){
+            placeholder="${placeholder}"
            @}
 
            @if(isNotEmpty(style)){

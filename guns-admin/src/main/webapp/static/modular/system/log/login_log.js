@@ -61,6 +61,14 @@ LoginLog.search = function () {
     LoginLog.table.refresh({query: queryData});
 };
 
+LoginLog.reset = function () {
+    $("#logName").val('');
+    $("#beginTime").val('');
+    $("#endTime").val('');
+   this.search();
+};
+
+
 $(function () {
 
     init();

@@ -10091,7 +10091,7 @@ h6 small,
 #main {
   position: relative;
   padding-bottom: 110px;
-  padding-top: 100px;
+  padding-top: 65px;
 }
 
 .container.c-alt {
@@ -10107,7 +10107,7 @@ h6 small,
 
 @media (min-width: 1200px) {
   body.sw-toggled #content {
-    padding-left: 268px;
+    padding-left: 220px;
   }
 }
 
@@ -10146,7 +10146,7 @@ h6 small,
 
 .header-inner {
   list-style: none;
-  padding: 17px 0;
+  padding: 10px 0;
   margin-bottom: 0;
   position: relative;
 }
@@ -10387,7 +10387,7 @@ h6 small,
 
 #header {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-  min-height: 70px;
+  min-height: 50px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -10682,8 +10682,8 @@ h6 small,
   position: fixed;
   background: #fff;
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.38);
-  height: calc(100% - 65px);
-  top: 65px;
+  height: calc(100% - 50px);
+  top: 50px;
   -webkit-transition: all;
   -o-transition: all;
   transition: all;
@@ -10701,9 +10701,9 @@ h6 small,
 }
 
 #sidebar {
-  width: 268px;
-  -webkit-transform: translate3d(-268px, 0, 0);
-  transform: translate3d(-268px, 0, 0);
+  width: 220px;
+  -webkit-transform: translate3d(-220px, 0, 0);
+  transform: translate3d(-220px, 0, 0);
 }
 
 #sidebar.toggled {
@@ -10713,7 +10713,7 @@ h6 small,
 
 .profile-menu > a {
   display: block;
-  height: 129px;
+  height: 96px;
   margin-bottom: 5px;
   width: 100%;
   background: url(../img/profile-menu.png) no-repeat left top;
@@ -10721,7 +10721,7 @@ h6 small,
 }
 
 .profile-menu > a .profile-pic {
-  padding: 12px;
+  padding: 5px;
 }
 
 .profile-menu > a .profile-pic > img {
@@ -10736,7 +10736,7 @@ h6 small,
   background: rgba(0, 0, 0, 0.37);
   padding: 7px 14px;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 0px;
   position: relative;
 }
 

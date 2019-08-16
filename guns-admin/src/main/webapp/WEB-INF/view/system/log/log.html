@@ -9,23 +9,24 @@
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-2">
-                        <#TimeCon id="beginTime" name="开始时间" isTime="false" pattern="YYYY-MM-DD" />
+                        <#TimeCon id="beginTime" name="开始时间" placeholder="开始时间"/>
                     </div>
                     <div class="col-sm-2">
-                        <#TimeCon id="endTime" name="结束时间" isTime="false" pattern="YYYY-MM-DD" />
+                        <#TimeCon id="endTime" name="结束时间" placeholder="结束时间"/>
                     </div>
-                    <div class="col-sm-3">
-                        <#NameCon id="logName" name="日志名称" />
+                    <div class="col-sm-2">
+                        <#NameCon id="logName" name="日志名称" placeholder="日志名称" />
                     </div>
-                    <div class="col-sm-3">
-                        <#SelectCon id="logType" name="日志类型" >
-                            <option value="0">全部</option>
+                    <div class="col-sm-2">
+                        <#SelectCon id="logType" name="日志类型" placeholder="日志类型" >
+                            <option value="0">日志类型</option>
                             <option value="1">业务日志</option>
                             <option value="2">异常日志</option>
                         </#SelectCon>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-4">
                         <#button name="搜索" icon="fa-search" clickFun="OptLog.search()"/>
+                        <#button name="重置" icon="fa-refresh" clickFun="OptLog.reset()" btnCss="info"/>
                     </div>
                 </div>
                 <div class="hidden-xs" id="OptLogTableToolbar" role="group">

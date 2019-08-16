@@ -21,8 +21,8 @@ OptLog.initColumn = function () {
         {title: '用户名称', field: 'userName', align: 'center', valign: 'middle'},
         {title: '类名', field: 'classname', align: 'center', valign: 'middle', sortable: true},
         {title: '方法名', field: 'method', align: 'center', valign: 'middle', sortable: true},
-        {title: '时间', field: 'createTime', align: 'center', valign: 'middle', sortable: true},
-        {title: '具体消息', field: 'message', align: 'center', valign: 'middle', sortable: true}];
+        {title: '时间', field: 'createTime', align: 'center', valign: 'middle', sortable: true}
+        ]
 };
 
 /**
@@ -87,7 +87,14 @@ OptLog.search = function () {
 
     OptLog.table.refresh({query: OptLog.formParams()});
 };
+OptLog.reset = function () {
+     $("#logName").val('');
+     $("#beginTime").val('');
+     $("#endTime").val('');
+     $("#logType").val('0');
+     this.search();
 
+};
 $(window).load(function(){
     var defaultColunms = OptLog.initColumn();
     var table = new BSTable(OptLog.id, "/log/list", defaultColunms);
