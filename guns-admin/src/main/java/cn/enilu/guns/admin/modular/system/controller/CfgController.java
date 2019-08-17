@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
+
 /**
  * CfgController
  *
@@ -79,7 +81,7 @@ public class CfgController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     @BussinessLog(value = "添加参数", key = "cfgName",dict = CfgDict.class)
-    public Object add(Cfg cfg) {
+    public Object add(@Valid Cfg cfg) {
        cfgService.saveOrUpdate(cfg);
         return SUCCESS_TIP;
     }
@@ -101,7 +103,7 @@ public class CfgController extends BaseController {
     @RequestMapping(value = "/update")
     @ResponseBody
     @BussinessLog(value = "编辑参数", key = "cfgName",dict = CfgDict.class)
-    public Object update(Cfg cfg) {
+    public Object update(@Valid  Cfg cfg) {
        cfgService.update(cfg);
         return SUCCESS_TIP;
     }

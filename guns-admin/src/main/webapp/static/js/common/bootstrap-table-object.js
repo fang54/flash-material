@@ -53,7 +53,7 @@
                     // showColumns: true,     		//是否显示所有的列
                     showRefresh: true,     		//是否显示刷新按钮
                     // minimumCountColumns: 2,    	//最少允许的列数
-                    clickToSelect: true,    	//是否启用点击选中行
+                    clickToSelect: false,    	//是否启用点击选中行
                     searchOnEnterKey: true,		//设置为 true时，按回车触发搜索方法，否则自动触发搜索方法
                     columns: this.columns,		//列数组
                     pagination: true,			//是否显示分页条

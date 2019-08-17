@@ -16,7 +16,7 @@
 		var _main_div = $("<div class='fixed-table-container'></div>");
 		target.before(_main_div);
 		_main_div.append(target);
-		target.addClass("table table-hover treegrid-table table-bordered");
+		target.addClass("table table-hover treegrid-table");
 		if (options.striped) {
 			target.addClass('table-striped');
 		}
@@ -70,8 +70,8 @@
 			$.each(options.columns, function(index, column) {
 				// 判断有没有选择列
 				if(index==0&&column.field=='selectItem'){
-					hasSelectItem = true;
-					var td = $('<td style="text-align:center;width:36px"></td>');
+					hasSelectItem = false;
+					var td = $('<td style="text-align:center;width:36px;vertical-align: middle;"></td>');
 					if(column.radio){
 						var _ipt = $('<input name="select_item" type="radio" value="'+item[options.id]+'"></input>');
 						td.append(_ipt);

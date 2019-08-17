@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
+
 /**
  * Created  on 2018/4/9 0009.
  * 系统参数
@@ -77,7 +79,7 @@ public class TaskController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     @BussinessLog(value = "添加定时任务", key = "name",dict = TaskDict.class)
-    public Object add(Task task) {
+    public Object add(@Valid Task task) {
         taskService.save(task);
         return SUCCESS_TIP;
     }
@@ -114,7 +116,7 @@ public class TaskController extends BaseController {
     @RequestMapping(value = "/update")
     @ResponseBody
     @BussinessLog(value = "编辑定时任务", key = "name",dict = TaskDict.class)
-    public Object update(Task task) {
+    public Object update(@Valid Task task) {
         Task old = taskService.get(task.getId());
         old.setName(task.getName());
         old.setCron(task.getCron());

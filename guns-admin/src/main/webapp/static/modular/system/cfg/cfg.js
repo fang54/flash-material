@@ -13,27 +13,20 @@ var Cfg = {
  */
 Cfg.initColumn = function () {
     return [
-        {field: 'selectItem', radio: true},
-            {title: '自增主键', field: 'id', visible: true, align: 'center', valign: 'middle'},
-            {title: '参数名', field: 'cfgName', visible: true, align: 'center', valign: 'middle'},
-            {title: '参数值', field: 'cfgValue', visible: true, align: 'center', valign: 'middle'},
-            {title: '参数描述', field: 'cfgDesc', visible: true, align: 'center', valign: 'middle'}
+        {field: 'selectItem', checkbox: true},
+        {title: 'ID', field: 'id', visible: true, align: 'center', valign: 'middle'},
+        {title: '参数名', field: 'cfgName', visible: true, align: 'center', valign: 'middle',formatter:function(data,row){
+            return '<a href="javascript:;" onclick="Cfg.openCfgDetail('+row.id+')">'+data+'</a>';
+        }},
+        {title: '参数值', field: 'cfgValue', visible: true, align: 'center', valign: 'middle'},
+        {title: '参数描述', field: 'cfgDesc', visible: true, align: 'center', valign: 'middle'},
+        {title: '操作',formatter:function(data,row){
+            return '<button type="button" class="btn btn-info btn-icon waves-effect waves-circle" onclick="Cfg.delete('+row.id+')" title="删除"><span class="zmdi zmdi-delete"></span></button>';
+
+        }}
     ];
 };
 
-/**
- * 检查是否选中
- */
-Cfg.check = function () {
-    var selected = $('#' + this.id).bootstrapTable('getSelections');
-    if(selected.length == 0){
-        Feng.info("请先选中表格中的某一记录！");
-        return false;
-    }else{
-        Cfg.seItem = selected[0];
-        return true;
-    }
-};
 
 /**
  * 点击添加系统参数
@@ -53,34 +46,36 @@ Cfg.openAddCfg = function () {
 /**
  * 打开查看系统参数详情
  */
-Cfg.openCfgDetail = function () {
-    if (this.check()) {
+Cfg.openCfgDetail = function (id) {
         var index = layer.open({
             type: 2,
             title: '系统参数详情',
             area: ['65%', '280px'], //宽高
             fix: false, //不固定
             maxmin: true,
-            content: Feng.ctxPath + '/cfg/cfg_update/' + Cfg.seItem.id
+            content: Feng.ctxPath + '/cfg/cfg_update/' + id
         });
         this.layerIndex = index;
-    }
+
 };
 
 /**
  * 删除系统参数
  */
-Cfg.delete = function () {
-    if (this.check()) {
+Cfg.delete = function (id) {
+    var operation = function() {
         var ajax = new $ax(Feng.ctxPath + "/cfg/delete", function (data) {
             Feng.success("删除成功!");
             Cfg.table.refresh();
         }, function (data) {
             Feng.error("删除失败!" + data.responseJSON.message + "!");
         });
-        ajax.set("cfgId",this.seItem.id);
+        ajax.set("cfgId", id);
         ajax.start();
-    }
+    };
+
+    Feng.confirm("确认删除该记录?", operation);
+
 };
 
 /**

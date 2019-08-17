@@ -15,7 +15,14 @@
     <link href="${ctxPath}/static/css/app.min.1.css" rel="stylesheet">
     <link href="${ctxPath}/static/css/app.min.2.css" rel="stylesheet">
     <style>
-
+        .login-header{
+            width:100%;
+            text-align: center;
+            top:19%;
+            font-size:36px;
+            color:#ffffff;
+            position: fixed;
+        }
     </style>
     <script>if (window.top !== window.self) {
         window.top.location = window.location;
@@ -23,8 +30,13 @@
 </head>
 
 <body class="login-content" >
+
+<div class="login-header">
+        <p>Material Admin</p>
+</div>
 <!-- Login -->
 <div class="lc-block toggled" id="l-login">
+
     <form  role="form" action="${ctxPath}/login" method="post">
     <div class="input-group m-b-20">
         <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
@@ -44,7 +56,7 @@
 
     <div class="checkbox">
         <label>
-            <input type="checkbox" value="" name="remember" >
+            <input type="checkbox" value="on" name="remember" >
             <i class="input-helper"></i>
             记住我
         </label>
@@ -64,21 +76,21 @@
     <div class="input-group m-b-20">
         <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
         <div class="fg-line">
-            <input type="text" class="form-control" placeholder="Username">
+            <input type="text" class="form-control" placeholder="用户名">
         </div>
     </div>
 
     <div class="input-group m-b-20">
         <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
         <div class="fg-line">
-            <input type="text" class="form-control" placeholder="Email Address">
+            <input type="text" class="form-control" placeholder="邮箱">
         </div>
     </div>
 
     <div class="input-group m-b-20">
         <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
         <div class="fg-line">
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" class="form-control" placeholder="密码">
         </div>
     </div>
 
@@ -88,34 +100,34 @@
         <label>
             <input type="checkbox" value="">
             <i class="input-helper"></i>
-            Accept the license agreement
+            接受协议
         </label>
     </div>
 
     <a href="" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
 
     <ul class="login-navigation">
-        <li data-block="#l-login" class="bgm-green">Login</li>
-        <li data-block="#l-forget-password" class="bgm-orange">Forgot Password?</li>
+        <li data-block="#l-login" class="bgm-green">登陆</li>
+        <li data-block="#l-forget-password" class="bgm-orange">忘记密码?</li>
     </ul>
 </div>
 
 <!-- Forgot Password -->
 <div class="lc-block" id="l-forget-password">
-    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu risus. Curabitur commodo lorem fringilla enim feugiat commodo sed ac lacus.</p>
+    <p class="text-left">请输入账户的注册邮箱，以找回密码</p>
 
     <div class="input-group m-b-20">
         <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
         <div class="fg-line">
-            <input type="text" class="form-control" placeholder="Email Address">
+            <input type="text" class="form-control" placeholder="邮箱">
         </div>
     </div>
 
     <a href="" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
 
     <ul class="login-navigation">
-        <li data-block="#l-login" class="bgm-green">Login</li>
-        <li data-block="#l-register" class="bgm-red">Register</li>
+        <li data-block="#l-login" class="bgm-green">登录</li>
+        <li data-block="#l-register" class="bgm-red">注册</li>
     </ul>
 </div>
 

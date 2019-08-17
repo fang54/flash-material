@@ -1,12 +1,9 @@
 package cn.enilu.guns.admin.modular.system.controller;
 
 import cn.enilu.guns.admin.core.base.controller.BaseController;
-import cn.enilu.guns.admin.core.util.ApiMenuFilter;
 import cn.enilu.guns.admin.core.util.KaptchaUtil;
 import cn.enilu.guns.bean.core.ShiroUser;
-import cn.enilu.guns.bean.entity.system.User;
 import cn.enilu.guns.bean.exception.InvalidKaptchaException;
-import cn.enilu.guns.bean.vo.node.MenuNode;
 import cn.enilu.guns.platform.log.LogManager;
 import cn.enilu.guns.platform.log.LogTaskFactory;
 import cn.enilu.guns.service.system.MenuService;
@@ -36,12 +33,8 @@ import java.util.List;
 @Controller
 public class LoginController extends BaseController {
     Logger logger = LoggerFactory.getLogger(LoginController.class);
-//    @Autowired
-//    MenuRepository menuRepository;
     @Autowired
     MenuService menuService;
-//    @Autowired
-//    UserRepository userRepository;
     @Autowired
     UserService userService;
 
