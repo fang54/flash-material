@@ -27,9 +27,9 @@ Task.initColumn = function () {
                 var button = '';
                 console.log(data);
                 if(!data) {
-                    button += '<div class="toggle-switch"> <input id="ts1" type="checkbox" hidden="hidden" checked="checked" onclick="Task.updateDisalbed('+row.id+','+!row.disabled+')"> <label for="ts1" class="ts-helper"></label> </div>';
+                    button += '<div class="toggle-switch"> <input id="ts'+row.id+'" type="checkbox" hidden="hidden" checked="checked" onclick="Task.updateDisalbed('+row.id+','+!row.disabled+')"> <label for="ts'+row.id+'" class="ts-helper"></label> </div>';
                 }else{
-                    button += '<div class="toggle-switch"> <input id="ts2" type="checkbox" hidden="hidden" onclick="Task.updateDisalbed('+row.id+','+!row.disabled+')""> <label for="ts2" class="ts-helper"></label> </div>';
+                    button += '<div class="toggle-switch"> <input id="ts'+row.id+'" type="checkbox" hidden="hidden" onclick="Task.updateDisalbed('+row.id+','+!row.disabled+')""> <label for="ts'+row.id+'" class="ts-helper"></label> </div>';
                 }
                 return button;
             }},

@@ -7,7 +7,7 @@
     <div class="card-body card-padding">
         <div class="row row-lg">
             <div class="col-sm-12">
-                <div class="row">
+                <div class="hidden-xs" id="OptLogTableToolbar" role="group">
                     <div class="col-sm-2">
                         <#TimeCon id="beginTime" name="开始时间" placeholder="开始时间"/>
                     </div>
@@ -24,13 +24,9 @@
                             <option value="2">异常日志</option>
                         </#SelectCon>
                     </div>
-                    <div class="col-sm-4">
-                        <#button name="搜索" icon="fa-search" clickFun="OptLog.search()"/>
-                        <#button name="重置" icon="fa-refresh" clickFun="OptLog.reset()" btnCss="info"/>
-                    </div>
-                </div>
-                <div class="hidden-xs" id="OptLogTableToolbar" role="group">
-                    <#button name="查看详情" icon="fa-plus" clickFun="OptLog.detail()"/>
+                    <#button name="搜索" icon="fa-search" clickFun="OptLog.search()"/>
+                    <#button name="重置" icon="fa-refresh" clickFun="OptLog.reset()" btnCss="info" space="true"/>
+
                     @if(shiro.hasPermission("/log/delLog")){
                         <#button name="清空日志" icon="fa-remove" btnCss="danger"  clickFun="OptLog.delLog()" space="true"/>
                     @}

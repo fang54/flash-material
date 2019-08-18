@@ -43,6 +43,7 @@ public class UserService extends BaseService<User,Long,UserRepository> {
                 if(StringUtils.isNotNullOrEmpty(params.get("account"))){
                     list.add(criteriaBuilder.like(root.get("account").as(String.class),params.get("account").toString()));
                 }
+                list.add(criteriaBuilder.notEqual(root.get("id").as(Long.class),-1L));
                 if(params.get("beginTime") != null && !Strings.isNullOrEmpty(params.get("beginTime").toString())){
                     list.add(criteriaBuilder.greaterThan(root.get("createTime").as(Date.class), DateUtil.parseDate(params.get("beginTime").toString())));
                 }

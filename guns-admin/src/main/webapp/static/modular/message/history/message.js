@@ -13,7 +13,6 @@ var Message = {
  */
 Message.initColumn = function () {
     return [
-        {field: 'selectItem', radio: true},
             {title: 'ID', field: 'id', visible: true, align: 'center', valign: 'middle'},
             {title: '消息模板', field: 'tplCode', visible: true, align: 'center', valign: 'middle'},
             {title: '消息内容', field: 'content', visible: true, align: 'center', valign: 'middle',formatter:function(data,row){

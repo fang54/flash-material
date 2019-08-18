@@ -15,9 +15,10 @@ OptLog.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
         {title: 'id', field: 'id', visible: false, align: 'center', valign: 'middle'},
+        {title: '日志名称', field: 'logname', align: 'center', valign: 'middle', sortable: true,formatter:function(data,row){
+            return '<a href="javascript:;" onclick="OptLog.detail('+row.id+')">'+row.logname+'</a>';
+        }},
         {title: '日志类型', field: 'logtype', align: 'center', valign: 'middle', sortable: true},
-        {title: '日志名称', field: 'logname', align: 'center', valign: 'middle', sortable: true},
-        // {title: '用户名称', field: 'userName', align: 'center', valign: 'middle', sortable: true, sortName: 'userid'},
         {title: '用户名称', field: 'userName', align: 'center', valign: 'middle'},
         {title: '类名', field: 'classname', align: 'center', valign: 'middle', sortable: true},
         {title: '方法名', field: 'method', align: 'center', valign: 'middle', sortable: true},
@@ -26,31 +27,15 @@ OptLog.initColumn = function () {
 };
 
 /**
- * 检查是否选中
- */
-OptLog.check = function () {
-    var selected = $('#' + this.id).bootstrapTable('getSelections');
-    if(selected.length == 0){
-        Feng.info("请先选中表格中的某一记录！");
-        return false;
-    }else{
-        OptLog.seItem = selected[0];
-        return true;
-    }
-};
-
-/**
  * 查看日志详情
  */
-OptLog.detail = function () {
-    if (this.check()) {
-        var ajax = new $ax(Feng.ctxPath + "/log/detail/" + this.seItem.id, function (data) {
+OptLog.detail = function (id) {
+        var ajax = new $ax(Feng.ctxPath + "/log/detail/" + id, function (data) {
             Feng.infoDetail("日志详情", data.regularMessage);
         }, function (data) {
             Feng.error("获取详情失败!");
         });
         ajax.start();
-    }
 };
 
 

@@ -7,7 +7,7 @@
 <div class="form-group">
     <div class="fg-line">
     <div class="select">
-        <select class="form-control" id="${id}">
+        <select class="selectpicker" id="${id}">
             ${tagBody!}
         </select>
     </div>

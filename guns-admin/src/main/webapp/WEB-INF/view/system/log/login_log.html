@@ -7,9 +7,9 @@
     <div class="card-body card-padding">
         <div class="row row-lg">
             <div class="col-sm-12">
-                <div class="row">
+                <div class="hidden-xs" id="LoginLogTableToolbar" role="group">
                     <div class="col-sm-2">
-                        <#TimeCon id="beginTime"  placeholder="开始时间"/>
+                        <#TimeCon id="beginTime" placeholder="开始时间"/>
                     </div>
                     <div class="col-sm-2">
                         <#TimeCon id="endTime" placeholder="结束时间"/>
@@ -17,11 +17,9 @@
                     <div class="col-sm-2">
                         <#NameCon id="logName" placeholder="日志名称" />
                     </div>
-                    <div class="col-sm-3">
                         <#button name="搜索" icon="fa-search" clickFun="LoginLog.search()"/>
-                        <#button name="重置" icon="fa-refresh" btnCss="info" clickFun="LoginLog.reset()"/>
-                        <#button name="清空日志" icon="fa-remove" btnCss="danger" clickFun="LoginLog.delLog()"/>
-                    </div>
+                        <#button name="重置" icon="fa-refresh" btnCss="info" clickFun="LoginLog.reset()" space="true"/>
+                        <#button name="清空日志" icon="fa-remove" btnCss="danger" clickFun="LoginLog.delLog()" space="true"/>
 
                 </div>
                 <#table id="LoginLogTable"/>

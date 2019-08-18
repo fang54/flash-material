@@ -15,36 +15,38 @@ var MgrUser = {
 MgrUser.initColumn = function () {
     var columns = [
         {field: 'selectItem', checkbox: true},
-        {title: 'id', field: 'id', visible: false, align: 'center', valign: 'middle'},
-        {title: '账号', field: 'account', align: 'center', valign: 'middle', sortable: true},
+        {title: 'ID', field: 'id', visible: false, align: 'center', valign: 'middle'},
+        {title: '账号', field: 'account', align: 'center', valign: 'middle', sortable: true,formatter:function(data,row){
+            return '<a href="javascript:;" onclick="MgrUser.openChangeUser('+row.id+')">'+row.account+'</a>';
+        }},
         {title: '姓名', field: 'name', align: 'center', valign: 'middle', sortable: true},
         {title: '性别', field: 'sexName', align: 'center', valign: 'middle', sortable: true},
-        {title: '角色', field: 'roleName', align: 'center', valign: 'middle', sortable: true},
+        {title: '角色', field: 'roleName', align: 'center', valign: 'middle', sortable: true,formatter:function(data,row){
+            if(data.length>5){
+                return '<i class="zmdi zmdi-more zmdi-hc-fw" title="'+data+'"></i>';
+            }
+            return data;
+        }},
         {title: '部门', field: 'deptName', align: 'center', valign: 'middle', sortable: true},
-        {title: '教育部门', field: 'eduOrgName', align: 'center', valign: 'middle', sortable: true},
         {title: '邮箱', field: 'email', align: 'center', valign: 'middle', sortable: true},
         {title: '电话', field: 'phone', align: 'center', valign: 'middle', sortable: true},
         {title: '创建时间', field: 'createtime', align: 'center', valign: 'middle', sortable: true},
-        {title: '状态', field: 'statusName', align: 'center', valign: 'middle', sortable: true},
         {title: '状态',field:'status',visible:true,align:'center',valign:'middle',formatter:function(data,row){
-            var button = '';
-            console.log(data);
-            if(data == ''){
-                return '启用';
-            }
+
             if(data == 3){
                 return '已删除';
             }
             if(data == 1) {
-                button += '<div class="toggle-switch"> <input id="ts1" type="checkbox" hidden="hidden" checked="checked" onclick="MgrUser.freezeAccount('+row.id+')"> <label for="ts1" class="ts-helper"></label> </div>';
+                return '<div class="toggle-switch"> <input id="ts'+row.id+'" type="checkbox" hidden="hidden" checked="checked" onclick="MgrUser.freezeAccount('+row.id+')"> <label for="ts'+row.id+'" class="ts-helper"></label> </div>';
             }
             if(data == 2){
-                button += '<div class="toggle-switch"> <input id="ts2" type="checkbox" hidden="hidden" onclick="MgrUser.unfreeze('+row.id+')""> <label for="ts2" class="ts-helper"></label> </div>';
+                return   '<div class="toggle-switch"> <input id="ts'+row.id+'" type="checkbox" hidden="hidden" onclick="MgrUser.unfreeze('+row.id+')""> <label for="ts'+row.id+'" class="ts-helper"></label> </div>';
             }
-            return button;
         }},
         {title: '操作',formatter:function(data,row){
-            return   '<button type="button" class="btn btn-info btn-icon waves-effect waves-circle" onclick="MgrUser.delMgrUser('+row.id+')" title="删除"><span class="zmdi zmdi-delete"></span></button>';
+            return '<button type="button" class="btn bgm-lightblue btn-icon waves-effect waves-circle" onclick="MgrUser.resetPwd('+row.id+')" title="重置密码"><span class="zmdi zmdi-lock-open"></span></button>'
+                +  '<button type="button" class="btn bgm-lightgreen btn-icon waves-effect waves-circle" onclick="MgrUser.roleAssign('+row.id+')" title="分配角色"><span class="zmdi zmdi-assignment-account"></span></button>'
+            + '<button type="button" class="btn btn-info btn-icon waves-effect waves-circle" onclick="MgrUser.delMgrUser('+row.id+')" title="删除"><span class="zmdi zmdi-delete"></span></button>';
 
         }}
     ];
